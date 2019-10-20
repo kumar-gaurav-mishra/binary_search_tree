@@ -1,2 +1,2 @@
-# Tree
-JavaScript implementation of the Tree Data structure.
+# Binary Search Tree
+JavaScript implementation of Binary Search Tree.
