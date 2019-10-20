@@ -1,0 +1,36 @@
+{
+  "name": "js-binary-search-tree",
+  "version": "1.0.0",
+  "description": "Javascript Implementation of Binary Search Tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "_mocha",
+    "coverage": "nyc --reporter html --reporter text npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumar-gaurav-mishra/binary_search_tree.git"
+  },
+  "keywords": [
+    "Javascript",
+    "DataStructure",
+    "js-trees",
+    "tree",
+    "js-tree",
+    "bst",
+    "binary search",
+    "binary search tree",
+    "BST"
+  ],
+  "author": "Kumar Gaurav Mishra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kumar-gaurav-mishra/binary_search_tree/issues"
+  },
+  "homepage": "https://github.com/kumar-gaurav-mishra/binary_search_tree/#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1"
+  }
+}
