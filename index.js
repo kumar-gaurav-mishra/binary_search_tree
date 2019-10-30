@@ -40,18 +40,32 @@ class BinarySearchTree {
     return this;
   }
   find(value) {
-    if (!vlaue) return undefined;
-    if()
+    if (value === undefined) return undefined;
+    if (this.root === null) return false;
+    let node = this.root;
+    while (node) {
+      if (value > node.value) {
+        node = node.right;
+      } else if (value < node.value) {
+        node = node.left;
+      } else if (value === node.value) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
   }
+  
 }
 const tree = new BinarySearchTree();
-tree.insert(10);
-tree.insert(10);
-tree.insert(7);
-tree.insert(15);
-tree.insert(3);
-tree.insert(14);
-tree.insert(17);
-tree.insert(8);
-console.log(tree);
+// tree.insert(10);
+// tree.insert(10);
+// tree.insert(7);
+// tree.insert(15);
+// tree.insert(3);
+// tree.insert(14);
+// tree.insert(17);
+// tree.insert(8);
+console.log(tree.find(0));
 module.exports = BinarySearchTree;
