@@ -88,11 +88,16 @@ class BinarySearchTree {
   }
   dfs() {
     if (this.root === null) return [];
-    //return this.dfsHelperPreOrder(this.root);//Pre Order
-    //return this.dfsHelperPostOrder(this.root);//Post Order
-    return this.dfsHelperInOrder(this.root); //In Order
+    return this.dfsHelperInOrder(this.root);
   }
-
+  dfsPreOrder() {
+    if (this.root === null) return [];
+    return this.dfsHelperPreOrder(this.root);
+  }
+  dfsPostOrder() {
+    if (this.root === null) return [];
+    return this.dfsHelperPostOrder(this.root);
+  }
   dfsHelperPreOrder(node, data = []) {
     if (node) {
       data.push(node.value);
@@ -101,7 +106,6 @@ class BinarySearchTree {
     if (node.right) this.dfsHelperPreOrder(node.right, data);
     return data;
   }
-
   dfsHelperPostOrder(node, data = []) {
     if (node.left) this.dfsHelperPostOrder(node.left, data);
     if (node.right) this.dfsHelperPostOrder(node.right, data);
@@ -119,13 +123,4 @@ class BinarySearchTree {
     return data;
   }
 }
-const tree = new BinarySearchTree();
-// tree.insert(10);
-// tree.insert(7);
-// tree.insert(15);
-// tree.insert(3);
-// tree.insert(14);
-// tree.insert(17);
-// tree.insert(8);
-console.log(tree.dfs());
 module.exports = BinarySearchTree;

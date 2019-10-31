@@ -1,5 +1,5 @@
 {
-  "name": "js-binary-search-tree",
+  "name": "binary_search_tree",
   "version": "1.0.0",
   "description": "Javascript Implementation of Binary Search Tree",
   "main": "index.js",
@@ -19,8 +19,9 @@
     "js-tree",
     "bst",
     "binary search",
-    "binary search tree",
-    "BST"
+    "binary-search-tree",
+    "BST",
+    "bst"
   ],
   "author": "Kumar Gaurav Mishra",
   "license": "MIT",
