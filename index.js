@@ -1,4 +1,5 @@
 'use strict';
+const Queue = require('js-queue-ds');
 class Node {
   constructor(value) {
     this.value = value;
@@ -72,15 +73,59 @@ class BinarySearchTree {
     }
     return false;
   }
+  bfs() {
+    const data = [];
+    if (this.root === null) return data;
+    let queue = new Queue();
+    queue.enqueue(this.root);
+    while (queue.size > 0) {
+      let node = queue.dequeue();
+      data.push(node.value);
+      if (node.left) queue.enqueue(node.left);
+      if (node.right) queue.enqueue(node.right);
+    }
+    return data;
+  }
+  dfs() {
+    if (this.root === null) return [];
+    //return this.dfsHelperPreOrder(this.root);//Pre Order
+    //return this.dfsHelperPostOrder(this.root);//Post Order
+    return this.dfsHelperInOrder(this.root); //In Order
+  }
+
+  dfsHelperPreOrder(node, data = []) {
+    if (node) {
+      data.push(node.value);
+    }
+    if (node.left) this.dfsHelperPreOrder(node.left, data);
+    if (node.right) this.dfsHelperPreOrder(node.right, data);
+    return data;
+  }
+
+  dfsHelperPostOrder(node, data = []) {
+    if (node.left) this.dfsHelperPostOrder(node.left, data);
+    if (node.right) this.dfsHelperPostOrder(node.right, data);
+    if (node) {
+      data.push(node.value);
+    }
+    return data;
+  }
+  dfsHelperInOrder(node, data = []) {
+    if (node.left) this.dfsHelperInOrder(node.left, data);
+    if (node) {
+      data.push(node.value);
+    }
+    if (node.right) this.dfsHelperInOrder(node.right, data);
+    return data;
+  }
 }
 const tree = new BinarySearchTree();
-tree.insert(10);
-tree.insert(10);
-tree.insert(7);
-tree.insert(15);
-tree.insert(3);
-tree.insert(14);
-tree.insert(17);
-tree.insert(8);
-console.log(tree.find(10));
+// tree.insert(10);
+// tree.insert(7);
+// tree.insert(15);
+// tree.insert(3);
+// tree.insert(14);
+// tree.insert(17);
+// tree.insert(8);
+console.log(tree.dfs());
 module.exports = BinarySearchTree;
