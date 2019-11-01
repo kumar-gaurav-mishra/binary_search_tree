@@ -1,6 +1,6 @@
 {
   "name": "binary_search_tree_ds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript Implementation of Binary Search Tree",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,12 @@
     "binary search",
     "binary-search-tree",
     "BST",
-    "bst"
+    "bst",
+    "dfs",
+    "bfs",
+    "dfs pre order",
+    "dfs post order",
+    "dfs in order"
   ],
   "author": "Kumar Gaurav Mishra",
   "license": "MIT",
