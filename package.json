@@ -1,6 +1,6 @@
 {
   "name": "binary_search_tree_ds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript Implementation of Binary Search Tree",
   "main": "index.js",
   "scripts": {
