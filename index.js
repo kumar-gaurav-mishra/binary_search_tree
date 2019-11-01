@@ -67,8 +67,6 @@ class BinarySearchTree {
         node = node.left;
       } else if (value === node.value) {
         return true;
-      } else {
-        return false;
       }
     }
     return false;
