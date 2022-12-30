@@ -36,7 +36,7 @@
   "homepage": "https://github.com/kumar-gaurav-mishra/binary_search_tree/#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.1",
+    "mocha": "^10.2.0",
     "nyc": "^14.1.1"
   },
   "dependencies": {
